@@ -1,0 +1,34 @@
+{
+  "name": "db-connector",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.12.3",
+    "assemblyscript": "AssemblyScript/assemblyscript",
+    "ts-node": "^7.0.1",
+    "ava": "^1.4.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "crossmodule": "github:fluencelabs/crossmodule"
+  },
+  "ava": {
+    "compileEnhancements": true,
+    "extensions": [
+      "ts"
+    ],
+    "require": [
+      "ts-node/register/transpile-only"
+    ],
+    "files": [
+      "tests/**/*.spec.ts"
+    ]
+  }
+}

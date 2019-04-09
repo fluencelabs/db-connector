@@ -1,4 +1,4 @@
-import {StringInvoke, API} from "../node_modules/crossmodule/assembly/index"
+import {StringInvoke, API} from "../as-dependencies/crossmodule/assembly/index"
 
 export declare function allocate(size: usize): i32;
 export declare function deallocate(ptr: i32, size: usize): void;

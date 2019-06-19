@@ -11,7 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^10.12.3",
-    "assemblyscript": "github:AssemblyScript/assemblyscript",
+    "assemblyscript": "github:fluencelabs/assemblyscript",
     "ava": "^1.4.1",
     "ts-node": "^7.0.1",
     "typescript": "^3.1.6"

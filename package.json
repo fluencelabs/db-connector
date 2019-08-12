@@ -1,31 +1,15 @@
 {
   "name": "db-connector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug",
-    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize"
+    "asbuild:untouched": "asc assembly/index.ts -b build/untouched.wasm -t build/untouched.wat --sourceMap --validate --debug --runtime stub",
+    "asbuild:optimized": "asc assembly/index.ts -b build/optimized.wasm -t build/optimized.wat --sourceMap --validate --optimize --runtime stub"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^10.12.3",
-    "assemblyscript": "github:fluencelabs/assemblyscript",
-    "ava": "^1.4.1",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.1.6"
-  },
-  "ava": {
-    "compileEnhancements": true,
-    "extensions": [
-      "ts"
-    ],
-    "require": [
-      "ts-node/register/transpile-only"
-    ],
-    "files": [
-      "tests/**/*.spec.ts"
-    ]
+    "assemblyscript": "assemblyscript/assemblyscript"
   }
 }

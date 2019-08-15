@@ -11,8 +11,8 @@ export function getStringInvoker(): StringInvoke {
     return new StringInvoke(api);
 }
 
-let invoker = getStringInvoker();
-
 export function query(request: string): string {
-    return invoker.invoke(request);
+    let stringInvoker = getStringInvoker();
+    let result = stringInvoker.invoke(request);
+    return result;
 }

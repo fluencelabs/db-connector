@@ -10,3 +10,9 @@ export function getStringInvoker(): StringInvoke {
     let api = new API(invoke, allocate, deallocate, store, load);
     return new StringInvoke(api);
 }
+
+let invoker = getStringInvoker();
+
+export function query(request: string): string {
+    return invoker.invoke(request);
+}
